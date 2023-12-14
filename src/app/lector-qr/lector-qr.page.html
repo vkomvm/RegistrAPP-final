@@ -1,0 +1,54 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Escáner QR</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<div class="welcome">
+<ion-title> Día y hora actual </ion-title>
+<ion-title>{{ currentDateTime }}</ion-title> 
+</div>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let barcode of barcodes">
+      <ion-label position="stacked">{{ barcode.format }}</ion-label>
+      <ion-input type="text" [value]="barcode.rawValue"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

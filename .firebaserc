@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "logonregistrapp": {
+      "hosting": {
+        "app": [
+          "logonregistrapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "logonregistrapp"
+  }
+}

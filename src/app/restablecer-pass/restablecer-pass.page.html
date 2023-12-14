@@ -1,0 +1,60 @@
+<ion-content>
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <div class="head1">
+        <div class="head1">
+          <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+          <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+        </div>
+      </div>
+      <div class="head2">
+      
+          <div class="label">
+            <ion-label class="yellow">Registr</ion-label>
+            <ion-label class="blue">App</ion-label>
+          </div>
+          <div class="label2">
+            <ion-label class="yellow">Duoc</ion-label>
+            <ion-label class="blue">UC</ion-label>   
+          </div>
+      </div>
+      
+      
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Cambiar contraseña</ion-title>
+        <ion-buttons slot="end">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+  
+  
+    <div class="welcome">
+      <ion-title> Día y hora actual </ion-title>
+      <ion-title>{{ currentDateTime }}</ion-title> 
+    </div>
+
+<ion-card class="card">
+  <ion-card-header>
+    <ion-title class="headerCard">Reestablecer Contraseña</ion-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item lines="full" class="inputItem">
+      <ion-label position="floating">Ingresa tu correo Duoc UC</ion-label>
+      
+      <ion-input type="text" [(ngModel)]="user.usuario" minlength="4" maxlength="20"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn btnIon" color="tertiary" (click)="reestablecerPass()">Reestablecer Contraseña
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

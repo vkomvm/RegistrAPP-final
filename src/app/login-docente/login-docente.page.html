@@ -1,0 +1,72 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Log in</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<div class="welcome">
+<ion-title> Día y hora actual </ion-title>
+<ion-title>{{ currentDateTime }}</ion-title> 
+</div>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Log in</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLoginDoc" (keyup.enter)="LogOn()">
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input formControlName="correo"></ion-input>
+      </ion-item>
+      <div *ngIf="this.formularioLoginDoc.controls?.['correo'].touched && this.formularioLoginDoc.controls?.['correo'].invalid">
+        
+      </div>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <div *ngIf="this.formularioLoginDoc.controls?.['password'].touched && this.formularioLoginDoc.controls?.['password'].invalid">
+        
+      </div>
+        <div class="boton">
+          <ion-button expand="block" (click)="menudocente()" class="botonmenu2"color="tertiary" expand="full">Ingresar</ion-button>
+        </div>
+        <div class="recuperar">
+          <ion-button (click)="restablecerpass()" fill="clear">Olvidé mi contraseña</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Código QR</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<div class="welcome">
+  <ion-title> Día y hora actual </ion-title>
+  <ion-title>{{ currentDateTime }}</ion-title> 
+</div>
+
+
+<ion-content>
+  <ion-label class="lista">Lista de alumnos</ion-label>
+  <ion-list>
+    <ion-item *ngFor="let a of alumnos; let i = index">
+</ion-item>
+  </ion-list>
+
+
+<ion-label class="txtinfo">Ingresa la fecha de hoy junto con la sección para generar el QR único</ion-label>
+<div class="qrcodigo">
+  <qrcode [width]="255" [qrdata]="qrdata" [errorCorrectionLevel]="'H'"></qrcode>
+  
+</div>
+<input type="text" [(ngModel)]="qrdata" />
+</ion-content>

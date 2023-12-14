@@ -1,0 +1,57 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú Docente</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<div class="welcome">
+<ion-title> Día y hora actual </ion-title>
+<ion-title>{{ currentDateTime }}</ion-title> 
+</div>
+
+<ion-item class="avatar">
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+  <ion-label> Freddy Campos </ion-label>
+</ion-item>
+
+<ion-button (click)="qr()" color="tertiary" expand="block">Iniciar asistencia del día de hoy</ion-button>
+
+<div class="titulo">Secciones
+<ion-button color="tertiary" expand="full">PGY4121-001D</ion-button>  
+<ion-button color="tertiary" expand="full">TCY0101-002D</ion-button>  
+<ion-button color="tertiary" expand="full">PFC010-003D</ion-button>  
+<ion-button color="tertiary" expand="full">INM4101-004D</ion-button>  
+<ion-button color="tertiary" expand="full">BIY6121-005D</ion-button>  
+<ion-button color="tertiary" expand="full">SQLA0121-006D</ion-button>   
+</div>

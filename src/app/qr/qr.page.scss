@@ -1,0 +1,148 @@
+.qrcodigo{
+    width: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.txtcodigo{
+    width: 100px;
+    margin-top: 2px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.txtinfo{
+    width: 200px;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #002138;
+
+}
+.QR{
+    width: 210px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    position: fixed;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    
+}
+
+.boton{
+    margin-top: 380px;
+    margin-bottom: 150px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.fondoapp {
+    background-color: #f0a400;
+  }
+  
+  .boton1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  ion-header{
+    height: 80px;
+    display: flex;
+    
+  }
+  .form{
+    margin-top: 50px;
+    display: grid;
+    
+    height: 50%;
+    padding: 20px;
+  }
+  .head1{
+    width: 10%;
+    height: 100%;
+    background-color: #000838 ;
+    padding-top: 10px;
+    padding-left: 2px;
+    
+  }
+  
+  a{  
+  text-decoration: none; color: #002138;
+  }
+  .head2{
+    width: 90%;
+    height: 100%;
+    background-color: #F8B31C;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+  
+  ion-button {
+    --background: #F8B31C;
+    --color: #002138;
+  }
+  .texto{
+    color: #F8B31C;
+    font-size: 21px;
+    
+  }
+  
+  a{
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  ion-img{
+  height: 30px;
+  }
+  
+  .label, .label2{
+    text-shadow: 0 0 1px rgb(190, 142, 11);
+    font-size: 150%;
+    display: flex;
+  }
+  
+  
+  .label .yellow, .label2 .yellow{
+    color: #f0a400;
+  
+  }
+  .label .blue,.label2 .blue{
+    color: #002138;
+  }
+  
+  ion-icon{
+    color: #F8B31C;
+  }
+  
+  
+  ion-avatar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 40px;
+    width: 40px;
+    font-size: xx-small;
+  }
+  
+  ion-tab-bar{
+    height: 100px;
+  }
+  
+  .welcome{
+    text-align: center;
+    display: block;
+    padding-top: 100px;
+  }
+  
+  ion-title{
+     font-size: x-large;
+     margin: 30px;
+  }

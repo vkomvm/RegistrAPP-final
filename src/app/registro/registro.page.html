@@ -1,0 +1,69 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Registro</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<div class="welcome">
+<ion-title> Día y hora actual </ion-title>
+<ion-title>{{ currentDateTime }}</ion-title> 
+</div>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro">
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input formControlName="correo"></ion-input>
+      </ion-item>
+      <div *ngIf="this.formularioRegistro.controls?.['correo'].touched && this.formularioRegistro.controls?.['correo'].invalid">
+        
+      </div>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <div *ngIf="this.formularioRegistro.controls?.['password'].touched && this.formularioRegistro.controls?.['password'].invalid">
+        
+      </div>
+        <div class="boton">
+          <ion-button expand="block" (click)="registro()" class="botonmenu1"color="tertiary" expand="full">Registrarse</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

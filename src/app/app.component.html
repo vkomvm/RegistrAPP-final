@@ -1,0 +1,63 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <div class="head1">
+      <div class="head1">
+        <a  id="present-alert" class="rotate"><ion-icon size="large" name="exit" ></ion-icon></a>
+        <ion-alert trigger="present-alert" class="custom-alert" header="¿Seguro que quiere salir?" [buttons]="alertButtons"></ion-alert>
+      </div>
+    </div>
+    <div class="head2">
+    
+        <div class="label">
+          <ion-label class="yellow">Registr</ion-label>
+          <ion-label class="blue">App</ion-label>
+        </div>
+        <div class="label2">
+          <ion-label class="yellow">Duoc</ion-label>
+          <ion-label class="blue">UC</ion-label>   
+        </div>
+    </div>
+    
+    
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list id="appUniq">
+      <ion-list-header>RegistrAPP</ion-list-header>
+      <ion-note>Servicios</ion-note>
+      
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+      <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="item-active">
+      <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+    <ion-label>{{ p.title }}</ion-label>
+  </ion-item>
+</ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú Principal</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" color="primary">
+      <ion-icon name="home"></ion-icon>
+      Inicio
+    </ion-tab-button>
+    <ion-tab-button  tab="lector-qr">
+      <ion-icon name="barcode"></ion-icon>
+      Escanear
+    </ion-tab-button>
+    <ion-tab-button tab="registro">
+      <ion-icon name="calendar"></ion-icon>
+      Registro
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
